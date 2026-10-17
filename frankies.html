@@ -74,6 +74,63 @@ main, section, .plushie-grid {
   margin: auto;
   object-fit: contain;
 }
+    /* One artwork per row */
+.plushie-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 50px !important;
+  padding: 40px 20px !important;
+}
+
+/* Large artwork tiles */
+.plushie-card {
+  box-sizing: border-box;
+  width: 95% !important;
+  max-width: 1100px !important;
+  min-height: 85vh !important;
+  margin: 0 auto !important;
+  padding: 35px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 18px !important;
+
+  background: rgba(255, 245, 250, 0.88) !important;
+  border-radius: 30px !important;
+}
+
+/* Make the plushie pictures big */
+.plushie-card img {
+  display: block !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 65vh !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+/* Artwork names */
+.plushie-card h3 {
+  font-size: 36px !important;
+  margin: 5px 0 !important;
+  color: #4b1768 !important;
+}
+
+/* Descriptions */
+.plushie-card p {
+  font-size: 18px !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
   </style>
 </head>
 
