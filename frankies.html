@@ -4,174 +4,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frankies | Sumaq Art</title>
-  <link rel="stylesheet" href="style.css">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #4b1768;
+      background-image: url("images/IMG_2591.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
     .frankies-page {
-      padding: 60px 8%;
       text-align: center;
+      padding: 30px 3%;
     }
 
-    .frankies-page h2 {
-      font-size: 3rem;
-      margin-bottom: 12px;
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #4b1768;
+      background: rgba(255,255,255,0.9);
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
+    .page-heading {
+      background: rgba(255,245,250,0.9);
+      border-radius: 25px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 6vw, 70px);
+      margin: 5px 0;
+    }
+
+    .page-heading p {
+      font-size: 18px;
+    }
+
+    /* One plushie per screen */
     .plushie-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 30px;
-      margin-top: 45px;
-    }
-
-    .plushie-card {
-      background: #fff0f7;
-      color: #402337;
-      padding: 18px;
-      border-radius: 20px;
-    }
-
-    .plushie-card img {
       width: 100%;
-      height: 290px;
-      object-fit: contain;
-      border-radius: 12px;
     }
 
-    .plushie-card h3 {
-      font-size: 1.6rem;
-      margin: 15px 0 8px;
+    /* Large artwork tile */
+    .plushie-card {
+      scroll-snap-align: start;
+      width: 100%;
+      max-width: 1250px;
+      min-height: 90vh;
+      padding: 30px;
+      background: rgba(255,245,250,0.9);
+      border-radius: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Large artwork image */
+    .plushie-card img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+
+    .plushie-card h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 10px 0 0;
     }
 
     .plushie-card p {
+      font-size: 19px;
       line-height: 1.6;
+      max-width: 650px;
+      margin: 0;
     }
- /* Plaid background */
-html, body {
-  background: url("images/IMG_2591.jpeg") center center / cover fixed no-repeat !important;
-}
 
-/* Make the artwork area transparent */
-main, section, .plushie-grid {
-  background: transparent !important;
-}
+    @media (max-width: 600px) {
+      .frankies-page {
+        padding: 15px;
+      }
 
-/* Make each artwork tile bigger */
-.plushie-card {
-  width: 90%;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 35px;
-  background: rgba(255, 245, 250, 0.92);
-  border-radius: 25px;
-}
+      .plushie-card {
+        padding: 20px;
+        min-height: 85vh;
+      }
 
-/* Make artwork images large */
-.plushie-card img {
-  display: block;
-  max-width: 100%;
-  max-height: 75vh;
-  width: auto;
-  margin: auto;
-  object-fit: contain;
-}
-    /* One artwork per row */
-.plushie-grid {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 50px !important;
-  padding: 40px 20px !important;
-}
-
-/* Large artwork tiles */
-.plushie-card {
-  box-sizing: border-box;
-  width: 95% !important;
-  max-width: 1100px !important;
-  min-height: 85vh !important;
-  margin: 0 auto !important;
-  padding: 35px !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 18px !important;
-
-  background: rgba(255, 245, 250, 0.88) !important;
-  border-radius: 30px !important;
-}
-
-/* Make the plushie pictures big */
-.plushie-card img {
-  display: block !important;
-  width: auto !important;
-  max-width: 100% !important;
-  height: auto !important;
-  max-height: 65vh !important;
-  object-fit: contain !important;
-  margin: 0 auto !important;
-}
-
-/* Artwork names */
-.plushie-card h3 {
-  font-size: 36px !important;
-  margin: 5px 0 !important;
-  color: #4b1768 !important;
-}
-
-/* Descriptions */
-.plushie-card p {
-  font-size: 18px !important;
-  text-align: center !important;
-  margin: 0 !important;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+      .plushie-card img {
+        max-height: 58vh;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="frankies-page">
-    <a href="index.html">← Back to Sumaq Art</a>
 
-    <h2>Frankies</h2>
-    <p>A collection of my handmade plushie creations.</p>
+    <a href="index.html" class="back-link">
+      ← Back to Sumaq Art
+    </a>
+
+    <div class="page-heading">
+      <h1>Frankies</h1>
+      <p>A collection of my handmade plushie creations.</p>
+    </div>
 
     <div class="plushie-grid">
 
-      <div class="plushie-card">
-<img src="images/aeaa2ed3-a7fe-4690-be69-ea189b31cbb6.png" alt="Miss the pink pig">
-        <h3>Miss</h3>
+      <article class="plushie-card">
+        <img src="images/aeaa2ed3-a7fe-4690-be69-ea189b31cbb6.png" alt="Miss the pink pig">
+        <h2>Miss</h2>
         <p>Description coming soon.</p>
-      </div>
+      </article>
 
-      <div class="plushie-card">
-<img src="images/c2eb6086-b00a-48c3-99d6-3607cc3dd69d.png" alt="Mushu the dog">
-        <h3>Mushu</h3>
+      <article class="plushie-card">
+        <img src="images/c2eb6086-b00a-48c3-99d6-3607cc3dd69d.png" alt="Mushu the dog">
+        <h2>Mushu</h2>
         <p>Description coming soon.</p>
-      </div>
+      </article>
 
-      <div class="plushie-card">
-<img src="images/db096712-1322-47f4-a381-41cda8c825b4.png" alt="Frank the yellow pig">
-        <h3>Frank</h3>
+      <article class="plushie-card">
+        <img src="images/db096712-1322-47f4-a381-41cda8c825b4.png" alt="Frank the pig">
+        <h2>Frank</h2>
         <p>Description coming soon.</p>
-      </div>
+      </article>
 
-      <div class="plushie-card">
-<img src="images/23c87bcc-8187-4263-ab12-80ccb0523b1d.png" alt="Pumpkin the bear">
-        <h3>Pumpkin</h3>
+      <article class="plushie-card">
+        <img src="images/23c87bcc-8187-4263-ab12-80ccb0523b1d.png" alt="Pumpkin the bear">
+        <h2>Pumpkin</h2>
         <p>Description coming soon.</p>
-      </div>
+      </article>
 
-      <div class="plushie-card">
-<img src="images/46b0475f-5285-4de6-a5a8-667b58bfaec9.png" alt="Daisy the jaguar">
-        <h3>Daisy</h3>
+      <article class="plushie-card">
+        <img src="images/46b0475f-5285-4de6-a5a8-667b58bfaec9.png" alt="Daisy the jaguar">
+        <h2>Daisy</h2>
         <p>Description coming soon.</p>
-      </div>
+      </article>
 
     </div>
   </main>
