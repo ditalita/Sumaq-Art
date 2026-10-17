@@ -1,0 +1,257 @@
+/* SUMAQ ART - WEBSITE DESIGN */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+  --pink: #e8b7c8;
+  --light-pink: #fff0f5;
+  --cream: #fffaf6;
+  --dark: #513b46;
+  --accent: #b76e87;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 500;
+}
+
+header {
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #f0dce3;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 29px;
+  margin: 0;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* HOMEPAGE */
+
+.hero {
+  min-height: 550px;
+  padding: 110px 25px;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #f7dce6,
+    #fffaf6
+  );
+  text-align: center;
+}
+
+.hero h2 {
+  max-width: 750px;
+  margin: 15px auto;
+}
+
+.hero p {
+  max-width: 530px;
+  margin: 20px auto;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 13px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #98536c;
+  transform: translateY(-2px);
+}
+
+/* GALLERY */
+
+.gallery-section {
+  padding: 85px 25px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.filters {
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filters button {
+  background: white;
+  border: 1px solid var(--pink);
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  color: var(--dark);
+  font-family: inherit;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(230px, 1fr)
+  );
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.art-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #513b4610;
+  padding-bottom: 18px;
+  transition: transform 0.2s;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+}
+
+.art-card h3 {
+  margin: 15px 10px 0;
+}
+
+.art-card p {
+  color: #8b7781;
+  margin: 5px;
+}
+
+.art-placeholder {
+  background: var(--light-pink);
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+}
+
+.art-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* ABOUT */
+
+.about-section {
+  background: var(--light-pink);
+  padding: 90px 25px;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* CONTACT */
+
+.contact-section {
+  padding: 90px 25px;
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 75px 20px;
+    min-height: 450px;
+  }
+
+  .gallery-section {
+    padding: 60px 20px;
+  }
+}
