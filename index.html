@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumaq Art | Your Art, Your Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1 class="logo">sumaq art.</h1>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Homepage -->
+  <section id="home" class="hero">
+    <p class="subtitle">WELCOME TO SUMAQ ART</p>
+
+    <h2>Every creation has a story.</h2>
+
+    <p>
+      A little corner of the internet dedicated
+      to creativity, imagination, and art.
+    </p>
+
+    <a href="#gallery" class="button">
+      Explore My Art
+    </a>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery-section">
+    <h2>My Art Gallery</h2>
+
+    <p>
+      A collection of things I've created
+      and the stories behind them.
+    </p>
+
+    <div class="filters">
+      <button onclick="filterArt('all')">All</button>
+      <button onclick="filterArt('painting')">Paintings</button>
+      <button onclick="filterArt('sewing')">Sewing</button>
+      <button onclick="filterArt('photography')">Photography</button>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="art-card painting">
+        <div class="art-placeholder">🎨</div>
+        <h3>My First Painting</h3>
+        <p>Painting</p>
+      </div>
+
+      <div class="art-card sewing">
+        <div class="art-placeholder">🧵</div>
+        <h3>Handmade Creations</h3>
+        <p>Sewing</p>
+      </div>
+
+      <div class="art-card photography">
+        <div class="art-placeholder">📷</div>
+        <h3>Through My Lens</h3>
+        <p>Photography</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <h2>Meet the Artist</h2>
+
+    <p>
+      Hi! I'm Dita, the artist behind Sumaq Art.
+
+      I love expressing myself through painting,
+      sewing, photography, and creating things
+      with my hands.
+
+      Sumaq means beautiful in Quechua,
+      and this space is where I share
+      the things I love creating.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <h2>Let's Connect!</h2>
+
+    <p>
+      Interested in my artwork or collaborating?
+      I'd love to hear from you!
+    </p>
+
+    <a href="mailto:YOUR_EMAIL@example.com"
+       class="button">
+      Contact Me
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Sumaq Art. Made with love ♡</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
